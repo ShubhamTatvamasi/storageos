@@ -11,8 +11,11 @@ Install storageos:
 curl -sL https://storageos.run | bash
 ```
 
-Dashboard ID and Password both:
-storageos
+Dashboard:
+```bash
+kubectl port-forward -n kube-system svc/storageos 5705
+```
+> Dashboard ID and Password both: `storageos`
 
 Get uid for cluster:
 ```bash
