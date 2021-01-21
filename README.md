@@ -11,7 +11,7 @@ Install storageos:
 curl -sL https://storageos.run | bash
 ```
 
-Dashboard:
+Dashboard: http://localhost:5705
 ```bash
 kubectl port-forward -n kube-system svc/storageos 5705
 ```
