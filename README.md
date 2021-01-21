@@ -11,6 +11,9 @@ Install storageos:
 curl -sL https://storageos.run | bash
 ```
 
+Dashboard ID and Password both:
+storageos
+
 Get uid for cluster:
 ```bash
 kubectl get StorageClass -o yaml | grep uid
