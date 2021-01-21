@@ -19,7 +19,7 @@ Get uid for cluster:
 kubectl get storageclass -o yaml | grep uid
 ```
 
-Make storageOS default class
+Make storageOS default class:
 ```bash
 kubectl patch storageclass fast \
   --patch='{
@@ -31,7 +31,7 @@ kubectl patch storageclass fast \
   }'
 ```
 
-Verify
+Verify:
 ```bash
 kubectl get storageclass
 ```
