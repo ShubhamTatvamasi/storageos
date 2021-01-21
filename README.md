@@ -16,5 +16,22 @@ storageos
 
 Get uid for cluster:
 ```bash
-kubectl get StorageClass -o yaml | grep uid
+kubectl get storageclass -o yaml | grep uid
+```
+
+Make storageOS default class
+```bash
+kubectl patch storageclass fast \
+  --patch='{
+    "metadata": {
+      "annotations": {
+        "storageclass.kubernetes.io/is-default-class": "true"
+      }
+    }
+  }'
+```
+
+Verify
+```bash
+kubectl get storageclass
 ```
