@@ -8,6 +8,9 @@ sudo apt -y install linux-modules-extra-$(uname -r)
 
 Helm install:
 ```bash
+helm repo add storageos https://charts.storageos.com    
+helm repo update
+
 helm upgrade -i storageos storageos/storageos-operator \
   -n storageos-operator \
   --set cluster.kvBackend.address=etcd.etcd.svc:2379 \
