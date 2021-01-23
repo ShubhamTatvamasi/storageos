@@ -10,7 +10,7 @@ Helm install:
 ```bash
 helm upgrade -i storageos storageos/storageos-operator \
   -n storageos-operator \
-  --set cluster.kvBackend.address=172.21.44.152:2379 \
+  --set cluster.kvBackend.address=etcd.etcd.svc:2379 \
   --set cluster.admin.password=storageos
 ```
 
