@@ -6,6 +6,14 @@ sudo apt -y update
 sudo apt -y install linux-modules-extra-$(uname -r)
 ```
 
+Helm install:
+```bash
+helm upgrade -i storageos storageos/storageos-operator \
+  -n storageos-operator \
+  --set cluster.kvBackend.address=172.21.44.152:2379 \
+  --set cluster.admin.password=storageos
+```
+
 Install storageos:
 ```bash
 curl -sL https://storageos.run | bash
