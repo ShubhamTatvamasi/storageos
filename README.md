@@ -10,9 +10,10 @@ Helm install:
 ```bash
 helm repo add storageos https://charts.storageos.com
 helm repo update
+kubectl create namespace storageos-operator
 
 helm upgrade -i storageos storageos/storageos-operator \
-  -n storageos-operator \
+  --namespace storageos-operator \
   --set cluster.kvBackend.address=etcd.etcd.svc:2379 \
   --set cluster.admin.password=storageos
 ```
